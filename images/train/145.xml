@@ -1,0 +1,26 @@
+<annotation>
+	<folder>addition</folder>
+	<filename>145.jpeg</filename>
+	<path>/Users/Darren/Desktop/NTU /y3s1/CZ3004 - MDP/real_pi/cv/lib/python3.7/site-packages/tensorflow/models/scripts/preprocessing/images/addition/145.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>1600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Left Arrow</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>501</xmin>
+			<ymin>677</ymin>
+			<xmax>711</xmax>
+			<ymax>891</ymax>
+		</bndbox>
+	</object>
+</annotation>

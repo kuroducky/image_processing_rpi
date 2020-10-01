@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>26.jpeg</filename>
+	<path>/Users/Darren/Desktop/NTU /y3s1/CZ3004 - MDP/real_pi/cv/lib/python3.7/site-packages/tensorflow/models/images/26.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>1600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Down Arrow</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>486</xmin>
+			<ymin>512</ymin>
+			<xmax>948</xmax>
+			<ymax>1039</ymax>
+		</bndbox>
+	</object>
+</annotation>

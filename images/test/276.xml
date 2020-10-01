@@ -1,0 +1,26 @@
+<annotation>
+	<folder>addition</folder>
+	<filename>276.jpeg</filename>
+	<path>/Users/Darren/Desktop/NTU /y3s1/CZ3004 - MDP/real_pi/cv/lib/python3.7/site-packages/tensorflow/models/scripts/preprocessing/images/addition/276.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>1600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Number 6</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>539</xmin>
+			<ymin>664</ymin>
+			<xmax>670</xmax>
+			<ymax>815</ymax>
+		</bndbox>
+	</object>
+</annotation>
