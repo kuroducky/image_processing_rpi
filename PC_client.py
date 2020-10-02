@@ -48,7 +48,7 @@ dictionary = {
 tf.get_logger().setLevel('ERROR')           # Suppress TensorFlow logging (2)
 
 SERVER_HOST = '192.168.7.7'  # The server's hostname or IP address
-SERVER_PORT = 8080        # The port used by the server
+SERVER_PORT = 8090        # The port used by the server
 SOCKET_BUFFER_SIZE = 512 
 
 class Client_Algorithm:
@@ -139,10 +139,12 @@ class Client_Algorithm:
 		# #Converting the image class to a string for passing out.
 		#Converting the image class to a string for passing out.
 		if (detections['detection_scores'][0] < MIN_CONF_THRESH):
-		print('Nothing is detected')
+			print('Nothing is detected')
+			return "!"
 		else:
-		x = str(detections['detection_classes'][0])
-		print(dictionary.get(x))
+			x = str(detections['detection_classes'][0])
+			print(dictionary.get(x))
+			return x
 
 
 
@@ -161,15 +163,19 @@ counter = 0
 detect_fn , category_index = loadmodel()
 
 
+while 1:
+	client.recieveImage(counter)
+	result = client.imageprocessing(counter)
+	counter = counter + 1
+	client.write(result)
 
-while 1: 
-	if (counter <= 4):
-		client.recieveImage(counter)
-		client.imageprocessing(counter)
-		counter = counter + 1 
-	else:
-		break
+#while 1: 
+#	if (counter <= 4):
+#		client.recieveImage(counter)
+#		client.imageprocessing(counter)
+#		counter = counter + 1 
+#	else:
+#		break
 
 #Concatenation of images
 oneframe()
-
