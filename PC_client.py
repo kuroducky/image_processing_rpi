@@ -138,19 +138,20 @@ class Client_Algorithm:
 
 		# #Converting the image class to a string for passing out.
 		#Converting the image class to a string for passing out.
-		if (detections['detection_scores'][0] < MIN_CONF_THRESH):
+		if (detections['detection_scores'][0] < 0.6):
 			print('Nothing is detected')
 			return "!"
 		else:
 			x = str(detections['detection_classes'][0])
 			print(dictionary.get(x))
+			cv2.imwrite(os.path.join('./processed_images/' , str(counter)+'.jpeg'), image_with_detections)
 			return x
 
 
 
 		# # DISPLAYS OUTPUT IMAGE
 		# cv2.imshow('Object Detector', image_with_detections)
-		cv2.imwrite(os.path.join('./processed_images/' , str(counter)+'.jpeg'), image_with_detections)
+		# cv2.imwrite(os.path.join('./processed_images/' , str(counter)+'.jpeg'), image_with_detections)
 
 		# # CLOSES WINDOW ONCE KEY IS PRESSED
 		# cv2.waitKey(0)
@@ -162,8 +163,9 @@ counter = 0
 #Loading of the model and getting required variables
 detect_fn , category_index = loadmodel()
 
+running_program =  True 
 
-while 1:
+while running_program:
 	client.recieveImage(counter)
 	result = client.imageprocessing(counter)
 	counter = counter + 1
